@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require("body-parser")
 const request = require("request")
@@ -37,7 +38,7 @@ app.post("/", function(req, res){
 
   const options = {
     method: "POST",
-    auth: "ali:816f1353fb603c18894ffaf49a11b79f-us13"
+    auth: process.env.AUTH
   }
 
 
@@ -70,7 +71,3 @@ app.listen(process.env.PORT || 8083, function(){
 })
 
 
-// API Key
-// 816f1353fb603c18894ffaf49a11b79f-us13
-
-// d52706f461
